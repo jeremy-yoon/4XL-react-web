@@ -1,0 +1,220 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+#__next {
+  height: 100%;
+}
+
+#nprogress .spinner {
+  display: "block";
+  position: fixed;
+  z-index: -1;
+  top: 0px;
+  right: 15px;
+}
+
+:root {
+  --primary: #8423ff;
+  --gray0: #161d24;
+  --gray1: #28323c;
+  --gray2: #374553;
+  --gray3: #646f7c;
+  --gray4: #a3a9af;
+  --gray5: #d3d6dc;
+  --gray6: #e5e7eb;
+  --gray7: #fafbfc;
+  --gray8: #fdfdfd;
+  --red: #ff3b30;
+}
+
+.h1 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.h2 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.h3 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.h4 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.s1 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.s2 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.s3 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.s4 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.b1 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.b2 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.c1 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.c2 {
+  font-family: Spoqa Han Sans Neo;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.divider1 {
+  height: 1px;
+  width: 100%;
+  background-color: var(--gray6);
+}
+
+.divider4 {
+  height: 4px;
+  width: 100%;
+  background-color: var(--gray6);
+}
+
+.divider8 {
+  height: 8px;
+  width: 100%;
+  background-color: var(--gray7);
+}
+
+.fw400 {
+  font-weight: 400;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.fw800 {
+  font-weight: 800;
+}
+
+.fw300 {
+  font-weight: 300;
+}
+
+.click {
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.feed-card .slick-list > .slick-track {
+  align-items: center !important;
+  display: flex;
+}
