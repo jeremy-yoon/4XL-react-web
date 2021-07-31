@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "Helvetica-Black";
+  src: url("fonts/HelveticaNowDisplay-Black.ttf");
+}
+@font-face {
+  font-family: "Helvetica-ExtraBold";
+  src: url("fonts/HelveticaNowDisplay-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Helvetica-Bold";
+  src: url("fonts/HelveticaNowDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: "Helvetica-Medium";
+  src: url("fonts/HelveticaNowDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: "Helvetica-Regular";
+  src: url("fonts/HelveticaNowDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "Helvetica-Light";
+  src: url("fonts/HelveticaNowDisplay-Light.ttf");
+}
+@font-face {
+  font-family: "Helvetica-ExtraLight";
+  src: url("fonts/HelveticaNowDisplay-ExtLt.ttf");
+}

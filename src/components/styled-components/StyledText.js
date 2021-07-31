@@ -1,7 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 
-const Stext = styled.span`
+export const Stext = styled.span`
   ${(props) => props.h1 && h1}
   ${(props) => props.h2 && h2}
   ${(props) => props.h3 && h3}
@@ -14,17 +13,7 @@ const Stext = styled.span`
   ${(props) => props.c1 && c1}
   ${(props) => props.c2 && c2}
 
-
-  ${(props) => props.primary && primary}
   ${(props) => props.black && black}
-  ${(props) => props.g0 && g0}
-  ${(props) => props.g1 && g1}
-  ${(props) => props.g2 && g2}
-  ${(props) => props.g3 && g3}
-  ${(props) => props.g4 && g4}
-  ${(props) => props.g5 && g5}
-  ${(props) => props.g6 && g6}
-  ${(props) => props.g7 && g7}
   ${(props) => props.white && white}
 
   margin-top: ${(props) => props.mgt || 0}px;
@@ -43,11 +32,10 @@ const Stext = styled.span`
 `;
 
 const h1 = css`
-  font-family: Pretendard;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 42px;
+  font-family: Helvetica-Black;
+  font-size: 160px;
+  line-height: 160px;
+  letter-spacing: 0.05em;
 `;
 const h2 = css`
   font-family: Pretendard;
@@ -57,11 +45,9 @@ const h2 = css`
   line-height: 36px;
 `;
 const h3 = css`
-  font-family: Pretendard;
-  font-style: normal;
-  font-weight: normal;
+  font-family: Helvetica-ExtraBold;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 30px;
 `;
 const s1 = css`
   font-family: Pretendard;
@@ -120,38 +106,38 @@ const c2 = css`
   line-height: 18px;
 `;
 
-const primary = css`
-  color: ${colors.primary};
-`;
+// const primary = css`
+//   color: ${colors.primary};
+// `;
 const black = css`
-  color: ${colors.black};
+  color: black;
 `;
-const g0 = css`
-  color: ${colors.gray0};
-`;
-const g1 = css`
-  color: ${colors.gray1};
-`;
-const g2 = css`
-  color: ${colors.gray2};
-`;
-const g3 = css`
-  color: ${colors.gray3};
-`;
-const g4 = css`
-  color: ${colors.gray4};
-`;
-const g5 = css`
-  color: ${colors.gray5};
-`;
-const g6 = css`
-  color: ${colors.gray6};
-`;
-const g7 = css`
-  color: ${colors.gray7};
-`;
+// const g0 = css`
+//   color: ${colors.gray0};
+// `;
+// const g1 = css`
+//   color: ${colors.gray1};
+// `;
+// const g2 = css`
+//   color: ${colors.gray2};
+// `;
+// const g3 = css`
+//   color: ${colors.gray3};
+// `;
+// const g4 = css`
+//   color: ${colors.gray4};
+// `;
+// const g5 = css`
+//   color: ${colors.gray5};
+// `;
+// const g6 = css`
+//   color: ${colors.gray6};
+// `;
+// const g7 = css`
+//   color: ${colors.gray7};
+// `;
 const white = css`
-  color: ${colors.white};
+  color: white;
 `;
 
 const ct = css`
@@ -163,5 +149,3 @@ const left = css`
 const right = css`
   text-align: right;
 `;
-
-export default Stext;
