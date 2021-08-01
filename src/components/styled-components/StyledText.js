@@ -85,9 +85,7 @@ const b1 = css`
   line-height: 24px;
 `;
 const b2 = css`
-  font-family: Pretendard;
-  font-style: normal;
-  font-weight: normal;
+  font-family: Helvetica-Regular;
   font-size: 14px;
   line-height: 20px;
 `;

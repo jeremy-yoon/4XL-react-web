@@ -7,7 +7,8 @@ export const Sdiv = styled.div`
   ${(props) => props.col && col}
   ${(props) => props.ct && ct}
   ${(props) => props.start && start}
-  ${(props) => props.end && end}
+  ${(props) => props.aend && aend}
+  ${(props) => props.jend && jend}
   ${(props) => props.act && act}
   ${(props) => props.jct && jct}
   ${(props) => props.sb && sb}
@@ -73,10 +74,14 @@ const start = css`
   align-items: flex-start;
 `;
 
-const end = css`
+const aend = css`
+  display: flex;
+  align-items: flex-end;
+`;
+
+const jend = css`
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
 `;
 
 const jct = css`
