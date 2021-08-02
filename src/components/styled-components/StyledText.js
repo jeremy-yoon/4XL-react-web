@@ -38,11 +38,9 @@ const h1 = css`
   letter-spacing: 0.05em;
 `;
 const h2 = css`
-  font-family: Pretendard;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 36px;
+  font-family: Helvetica-ExtraBold;
+  font-size: 120px;
+  line-height: 130px;
 `;
 const h3 = css`
   font-family: Helvetica-ExtraBold;
@@ -108,7 +106,9 @@ const c2 = css`
 //   color: ${colors.primary};
 // `;
 const black = css`
-  color: black;
+  color: ${(props) =>
+    props.theme.colors.titleColor ? props.theme.colors.titleColor : black};
+  transition: all 0.25s linear;
 `;
 // const g0 = css`
 //   color: ${colors.gray0};
@@ -135,7 +135,9 @@ const black = css`
 //   color: ${colors.gray7};
 // `;
 const white = css`
-  color: white;
+  color: ${(props) =>
+    props.theme.colors.titleColor ? props.theme.colors.titleColor : white};
+  transition: all 0.25s linear;
 `;
 
 const ct = css`

@@ -1,6 +1,8 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import ReactFullpage from "@fullpage/react-fullpage";
 import { useHistory } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { Sdiv, Stext } from "components";
 import imgSample from "images/sample.png";
 // import Sketch from "react-p5";
@@ -45,29 +47,33 @@ export const HomeScreen = () => {
         <Sdiv col mgt={40}>
           <S.NavButton>
             <Stext h3 white onClick={goUXPortfolio}>
-              UX Design
+              Design/Development Portfolios
             </Stext>
           </S.NavButton>
           <S.NavButton>
             <Stext h3 white onClick={goSWPortfolio}>
-              Software Development
+              UX Research Articles
             </Stext>
           </S.NavButton>
-          <S.NavButton>
+          {/* <S.NavButton>
             <Stext h3 white onClick={goPMPortfolio}>
               Project Management
             </Stext>
-          </S.NavButton>
+          </S.NavButton> */}
           <S.NavButton onClick={goProfile}>
             <Stext h3 white>
-              My Profile
+              Profile
             </Stext>
           </S.NavButton>
         </Sdiv>
         <Sdiv mgt={72} col>
-          <S.SelectedH1 h1>All ABOUT</S.SelectedH1>
-          <S.UnSelectedH1 h1>UX DESIGN</S.UnSelectedH1>
-          <S.UnSelectedH1 h1>SW DEVELOPMENT</S.UnSelectedH1>
+          <S.SelectedH1 h1>FOUR X L</S.SelectedH1>
+          <S.UnSelectedH1 h1 duration={1.2}>
+            For Logical, Luxury,
+          </S.UnSelectedH1>
+          <S.UnSelectedH1 h1 duration={1.4}>
+            Lead, Life
+          </S.UnSelectedH1>
         </Sdiv>
       </Sdiv>
       <S.Footer>
@@ -89,16 +95,24 @@ export const HomeScreen = () => {
 
 const S = {};
 
-const boxFade = keyframes`
-  0% {
-    opacity: 1;
-  }
-  50% {
+const slideUp = keyframes`
+  from {
+    transform: translateX(200px);
     opacity: 0;
   }
-  100% {
+  to {
+    transform: translateX(0px);
     opacity: 1;
+
   }
+`;
+
+const slidUpSet = css`
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+  animation-name: ${slideUp};
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
 `;
 
 S.Body = styled.div`
@@ -117,19 +131,27 @@ S.Footer = styled.div`
 `;
 
 S.SelectedH1 = styled(Stext)`
-  color: white;
+  color: ${(props) => props.theme.colors.titleColor};
   letter-spacing: 0.05em;
   cursor: pointer;
   z-index: 1;
+  ${slidUpSet};
+  animation-duration: 1s !important;
+  transition: all 0.25s linear;
 `;
 
 S.UnSelectedH1 = styled(Stext)`
-  color: black;
+  color: ${(props) =>
+    props.theme.colors.titleColor == "white" ? "black" : "white"};
   letter-spacing: 0.05em;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
-    1px 1px 0 white;
+  text-shadow: -1px -1px 0 ${(props) => props.theme.colors.titleColor},
+    1px -1px 0 ${(props) => props.theme.colors.titleColor},
+    -1px 1px 0 ${(props) => props.theme.colors.titleColor},
+    1px 1px 0 ${(props) => props.theme.colors.titleColor};
   cursor: pointer;
-  z-index: 1;
+  ${slidUpSet};
+  animation-duration: ${(props) => props.duration}s !important;
+  transition: all 0.25s linear;
 `;
 
 S.AnimationContainer = styled.div`
@@ -147,4 +169,5 @@ S.AnimationContainer = styled.div`
 
 S.NavButton = styled.div`
   cursor: pointer;
+  ${slidUpSet};
 `;
