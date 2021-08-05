@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import styled, { keyframes, css } from "styled-components";
 import { Sdiv, Stext } from "components";
 import imgSample from "images/sample.png";
+import VideoSample from "images/VideoSample.mp4";
 // import Sketch from "react-p5";
 
 export const HomeScreen = () => {
@@ -69,13 +70,18 @@ export const HomeScreen = () => {
         <Sdiv mgt={72} col>
           <S.SelectedH1 h1>FOUR X L</S.SelectedH1>
           <S.UnSelectedH1 h1 duration={1.2}>
-            For Logical, Luxury,
+            Logical, Luxury,
           </S.UnSelectedH1>
           <S.UnSelectedH1 h1 duration={1.4}>
             Lead, Life
           </S.UnSelectedH1>
         </Sdiv>
       </Sdiv>
+      <S.BgVideoWrapper>
+        <S.BgVideo autoPlay loop muted>
+          <source src={VideoSample} type="video/mp4" />
+        </S.BgVideo>
+      </S.BgVideoWrapper>
       <S.Footer>
         <Stext b2 white>
           4XL. All rights reserved.
@@ -124,6 +130,23 @@ S.Body = styled.div`
   position: absolute;
 `;
 
+S.BgVideoWrapper = styled.div`
+  position: fixed;
+  top: 47.5%;
+  left: 20%;
+  /* transform: translate(0%, -50%); */
+  transform: rotate(90deg);
+`;
+
+S.BgVideo = styled.video`
+  z-index: 0;
+  width: 120vh;
+  height: 80px;
+  object-fit: cover;
+  overflow: hidden;
+  border: 5px solid white;
+`;
+
 S.Footer = styled.div`
   position: fixed;
   left: 48px;
@@ -141,8 +164,7 @@ S.SelectedH1 = styled(Stext)`
 `;
 
 S.UnSelectedH1 = styled(Stext)`
-  color: ${(props) =>
-    props.theme.colors.titleColor == "white" ? "black" : "white"};
+  color: ${(props) => props.theme.colors.bgColor};
   letter-spacing: 0.05em;
   text-shadow: -1px -1px 0 ${(props) => props.theme.colors.titleColor},
     1px -1px 0 ${(props) => props.theme.colors.titleColor},
@@ -152,6 +174,7 @@ S.UnSelectedH1 = styled(Stext)`
   ${slidUpSet};
   animation-duration: ${(props) => props.duration}s !important;
   transition: all 0.25s linear;
+  z-index: 1;
 `;
 
 S.AnimationContainer = styled.div`

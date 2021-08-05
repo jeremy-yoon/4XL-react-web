@@ -5,27 +5,57 @@ import { Sdiv, Stext } from "components";
 export const UXPortfolioScreen = () => {
   return (
     <S.Body>
-      <Sdiv>
-        <Sdiv mgt={48} mgl={48} col jct act>
-          <Sdiv row>
-            <S.Gallery animation={slideUp} />
-            <S.Gallery animation={slideDown} />
-            <S.Gallery animation={slideLeft} />
-            <S.Gallery animation={slideRight} />
-          </Sdiv>
-          <Sdiv row>
-            <S.Gallery animation={slideRight} />
-            <S.Gallery animation={slideLeft} />
-            <S.Gallery animation={slideDown} />
-            <S.Gallery animation={slideUp} />
-          </Sdiv>
+      <Sdiv mgt={48} mgl={48} col jct act>
+        <Sdiv row>
+          <S.Gallery
+            animation={slideDown}
+            src={"http://placeimg.com/300/400/arch"}
+            duration={0.8}
+          />
+          <S.Gallery
+            animation={slideDown}
+            src={"http://placeimg.com/300/400/animals"}
+            duration={1.0}
+          />
+          <S.Gallery
+            animation={slideDown}
+            src={"http://placeimg.com/300/400/nature"}
+            duration={1.2}
+          />
+          <S.Gallery
+            animation={slideDown}
+            src={"http://placeimg.com/300/400/people"}
+            duration={1.4}
+          />
+        </Sdiv>
+        <Sdiv row>
+          <S.Gallery
+            animation={slideUp}
+            src={"http://placeimg.com/300/400/tech"}
+            duration={1.4}
+          />
+          <S.Gallery
+            animation={slideUp}
+            src={"http://placeimg.com/300/400/arch"}
+            duration={1.2}
+          />
+          <S.Gallery
+            animation={slideUp}
+            src={"http://placeimg.com/300/400/any"}
+            duration={1.0}
+          />
+          <S.Gallery
+            animation={slideUp}
+            src={"http://placeimg.com/300/400/nature"}
+            duration={0.8}
+          />
         </Sdiv>
       </Sdiv>
-      <S.Footer>
+      {/* <S.Footer>
         <Stext b2 white>
           4XL. All rights reserved.
         </Stext>
-      </S.Footer>
+      </S.Footer> */}
     </S.Body>
   );
 };
@@ -74,12 +104,14 @@ const slideLeft = keyframes`
 `;
 
 const slideSet = css`
-  animation-duration: 0.8s;
+  animation-duration: ${(props) => props.duration}s;
   animation-timing-function: ease;
   animation-name: ${(props) => props.animation};
   animation-fill-mode: forwards;
   animation-delay: 0.5s;
 `;
+
+const expandEffect = css``;
 
 S.Body = styled.div`
   flex: 1;
@@ -87,6 +119,9 @@ S.Body = styled.div`
   flex-direction: column;
   align-content: space-between;
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   overflow: hidden;
 `;
 
@@ -96,7 +131,7 @@ S.Footer = styled.div`
   bottom: 48px;
 `;
 
-S.Gallery = styled.div`
+S.Gallery = styled.img`
   background-color: ${(props) => props.theme.colors.titleColor};
   height: 400px;
   width: 300px;
@@ -104,4 +139,5 @@ S.Gallery = styled.div`
   margin-bottom: 16px;
   ${slideSet}
   ${(props) => props.animation}
+  animation-duration: ${(props) => props.duration};
 `;
