@@ -1,12 +1,12 @@
 import React from "react";
 import styled, { css, keyframes } from "styled-components";
-import { Sdiv, Stext } from "components";
+import { Sv, St } from "components";
 
 export const UXPortfolioScreen = () => {
   return (
     <S.Body>
-      <Sdiv mgt={48} mgl={48} col jct act>
-        <Sdiv row>
+      <Sv mt={48} ml={48} col jct act>
+        <Sv row>
           <S.Gallery
             animation={slideDown}
             src={"http://placeimg.com/300/400/arch"}
@@ -27,8 +27,8 @@ export const UXPortfolioScreen = () => {
             src={"http://placeimg.com/300/400/people"}
             duration={1.4}
           />
-        </Sdiv>
-        <Sdiv row>
+        </Sv>
+        <Sv row>
           <S.Gallery
             animation={slideUp}
             src={"http://placeimg.com/300/400/tech"}
@@ -49,12 +49,12 @@ export const UXPortfolioScreen = () => {
             src={"http://placeimg.com/300/400/nature"}
             duration={0.8}
           />
-        </Sdiv>
-      </Sdiv>
+        </Sv>
+      </Sv>
       {/* <S.Footer>
-        <Stext b2 white>
+        <St b2 white>
           4XL. All rights reserved.
-        </Stext>
+        </St>
       </S.Footer> */}
     </S.Body>
   );

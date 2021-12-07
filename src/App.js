@@ -15,7 +15,7 @@ import {
 } from "screens";
 import styled, { ThemeProvider } from "styled-components";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { Sdiv } from "components";
+import { Sv } from "components";
 import { ReactComponent as LogoMain } from "images/LogoMain.svg";
 import { ReactComponent as IcMore } from "images/IcMore.svg";
 import { dark, light } from "styles/theme";
@@ -33,14 +33,14 @@ export const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <S.Body>
-        <Sdiv pdt={72} pdl={48} pdr={48} sb>
-          <Sdiv onClick={goHome} style={{ cursor: "pointer" }}>
+        <Sv pt={72} pl={48} pr={48} row jsb>
+          <Sv onClick={goHome} pointer>
             <S.LogoMain />
-          </Sdiv>
-          <Sdiv onClick={() => setThemeMode(!themeMode)}>
+          </Sv>
+          <Sv onClick={() => setThemeMode(!themeMode)}>
             <S.IcMore />
-          </Sdiv>
-        </Sdiv>
+          </Sv>
+        </Sv>
 
         <TransitionGroup>
           <CSSTransition

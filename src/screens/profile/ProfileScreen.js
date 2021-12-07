@@ -1,38 +1,38 @@
 import React from "react";
 import styled, { keyframes, css } from "styled-components";
-import { Sdiv, Stext } from "components";
+import { Sv, St } from "components";
 
 export const ProfileScreen = () => {
   return (
     <S.Body>
-      <Sdiv>
-        <Sdiv mgt={48} mgl={48} col>
+      <Sv>
+        <Sv mt={48} ml={48} col>
           <S.TextWrapper>
-            <Stext h2 white>
+            <St h2 white>
               JEREMY YOON
-            </Stext>
+            </St>
           </S.TextWrapper>
           <S.TextWrapper duration={1.0}>
-            <Stext h2 white>
+            <St h2 white>
               SW ENGINEER / DESIGNER
-            </Stext>
+            </St>
           </S.TextWrapper>
           <S.TextWrapper duration={1.2}>
-            <Stext h2 white>
+            <St h2 white>
               BASED IN SEOUL
-            </Stext>
+            </St>
           </S.TextWrapper>
           <S.TextWrapper duration={1.4}>
-            <Stext h2 white>
+            <St h2 white>
               CONTACT@FORXL.IO
-            </Stext>
+            </St>
           </S.TextWrapper>
-        </Sdiv>
-      </Sdiv>
+        </Sv>
+      </Sv>
       <S.Footer>
-        <Stext b2 white>
+        <St b2 white>
           4XL. All rights reserved.
-        </Stext>
+        </St>
       </S.Footer>
     </S.Body>
   );

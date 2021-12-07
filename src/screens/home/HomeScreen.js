@@ -3,30 +3,12 @@ import ReactDOM from "react-dom";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { useHistory } from "react-router-dom";
 import styled, { keyframes, css } from "styled-components";
-import { Sdiv, Stext } from "components";
+import { Sv, St } from "components";
 import imgSample from "images/sample.png";
 import VideoSample from "images/VideoSample.mp4";
 // import Sketch from "react-p5";
 
 export const HomeScreen = () => {
-  // let y = 0;
-  // let direction = "^";
-
-  // const setup = (p5, parentRef) => {
-  //   p5.createCanvas(200, 200).parent(parentRef);
-  // };
-
-  // const draw = (p5) => {
-  //   p5.background(0);
-  //   p5.fill(255, y * 1.3, 0);
-  //   p5.ellipse(p5.width / 2, y, 50);
-  //   if (y > p5.height) direction = "";
-  //   if (y < 0) {
-  //     direction = "^";
-  //   }
-  //   if (direction === "^") y += 8;
-  //   else y -= 4;
-  // };
   const history = useHistory();
 
   const goProfile = () => {
@@ -44,30 +26,30 @@ export const HomeScreen = () => {
 
   return (
     <S.Body>
-      <Sdiv>
-        <Sdiv col mgt={40}>
+      <Sv>
+        <Sv col mt={40}>
           <S.NavButton>
-            <Stext h3 white onClick={goUXPortfolio}>
+            <St h3 white onClick={goUXPortfolio}>
               Design/Development Portfolios
-            </Stext>
+            </St>
           </S.NavButton>
           <S.NavButton>
-            <Stext h3 white onClick={goSWPortfolio}>
+            <St h3 white onClick={goSWPortfolio}>
               UX Research Articles
-            </Stext>
+            </St>
           </S.NavButton>
           {/* <S.NavButton>
-            <Stext h3 white onClick={goPMPortfolio}>
+            <St h3 white onClick={goPMPortfolio}>
               Project Management
-            </Stext>
+            </St>
           </S.NavButton> */}
           <S.NavButton onClick={goProfile}>
-            <Stext h3 white>
+            <St h3 white>
               Profile
-            </Stext>
+            </St>
           </S.NavButton>
-        </Sdiv>
-        <Sdiv mgt={72} col>
+        </Sv>
+        <Sv mt={72} col>
           <S.SelectedH1 h1>FOUR X L</S.SelectedH1>
           <S.UnSelectedH1 h1 duration={1.2}>
             Logical, Luxury,
@@ -75,17 +57,17 @@ export const HomeScreen = () => {
           <S.UnSelectedH1 h1 duration={1.4}>
             Lead, Life
           </S.UnSelectedH1>
-        </Sdiv>
-      </Sdiv>
+        </Sv>
+      </Sv>
       <S.BgVideoWrapper>
         <S.BgVideo autoPlay loop muted>
           <source src={VideoSample} type="video/mp4" />
         </S.BgVideo>
       </S.BgVideoWrapper>
       <S.Footer>
-        <Stext b2 white>
+        <St b2 white>
           4XL. All rights reserved.
-        </Stext>
+        </St>
       </S.Footer>
       {/* <S.AnimationContainer>
         <img src={imgSample} alt="background" />
@@ -153,7 +135,7 @@ S.Footer = styled.div`
   bottom: 48px;
 `;
 
-S.SelectedH1 = styled(Stext)`
+S.SelectedH1 = styled(St)`
   color: ${(props) => props.theme.colors.titleColor};
   letter-spacing: 0.05em;
   cursor: pointer;
@@ -163,7 +145,7 @@ S.SelectedH1 = styled(Stext)`
   transition: all 0.25s linear;
 `;
 
-S.UnSelectedH1 = styled(Stext)`
+S.UnSelectedH1 = styled(St)`
   color: ${(props) => props.theme.colors.bgColor};
   letter-spacing: 0.05em;
   text-shadow: -1px -1px 0 ${(props) => props.theme.colors.titleColor},

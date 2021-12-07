@@ -1,30 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import { Sdiv, Stext } from "components";
+import { Sv, St } from "components";
 
 export const PMPortfolioScreen = () => {
   return (
     <S.Body>
-      <Sdiv>
-        <Sdiv mgt={48} mgl={48} col jct act>
-          <Sdiv row>
+      <Sv>
+        <Sv mt={48} ml={48} col jct act>
+          <Sv row>
             <S.Gallery />
             <S.Gallery />
             <S.Gallery />
             <S.Gallery />
-          </Sdiv>
-          <Sdiv row>
+          </Sv>
+          <Sv row>
             <S.Gallery />
             <S.Gallery />
             <S.Gallery />
             <S.Gallery />
-          </Sdiv>
-        </Sdiv>
-      </Sdiv>
+          </Sv>
+        </Sv>
+      </Sv>
       <S.Footer>
-        <Stext b2 white>
+        <St b2 white>
           4XL. All rights reserved.
-        </Stext>
+        </St>
       </S.Footer>
     </S.Body>
   );

@@ -1,4 +1,4 @@
-import { Sdiv } from "components/styled-components/StyledDiv";
-import { Stext } from "components/styled-components/StyledText";
+import { Sv } from "components/styled-components/StyledDiv";
+import { St } from "components/styled-components/StyledText";
 
-export { Sdiv, Stext };
+export { Sv, St };
